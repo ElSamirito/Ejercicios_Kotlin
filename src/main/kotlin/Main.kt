@@ -1,3 +1,6 @@
 fun main() {
-    println("Ola Fede")
+
+}
+fun eje1(name: String){
+    print("Hola $name!")
 }
