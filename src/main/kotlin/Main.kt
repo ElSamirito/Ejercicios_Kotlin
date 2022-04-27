@@ -8,6 +8,8 @@ fun eje2(){
     val a = 2
     val b = 3
     var sum = a+b
+    var mul = a*b
 
-    print("$sum")
+    println("Suma: $sum")
+    println("Producto: $mul")
 }
