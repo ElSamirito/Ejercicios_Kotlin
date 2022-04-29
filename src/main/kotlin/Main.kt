@@ -1,5 +1,5 @@
 fun main() {
-    eje5()
+    eje6()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -46,4 +46,13 @@ fun eje5() {
 
     println("Suma: $sum")
     println("Producto: $mul")
+}
+fun eje6(){
+    println("Ingrese el precio del artículo:")
+    var price = readLine()!!.toFloat()
+    println("Ingrese la cantidad a llevar por el cliente:")
+    var cant = readLine()!!.toInt()
+
+    val totalP = price * cant
+    print("El precio final de la orden es de $$totalP")
 }
