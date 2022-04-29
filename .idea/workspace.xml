@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4295a4ce-dd27-48ef-b7bf-231700d24a32" name="Changes" comment="Exercise 2">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="4295a4ce-dd27-48ef-b7bf-231700d24a32" name="Changes" comment="Exercise 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +73,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651083158626</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Exercise 3">
+      <created>1651239163498</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651239163563</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Exercise 4">
+      <created>1651239265142</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651239265142</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +105,8 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Exercise 1" />
     <MESSAGE value="Exercise 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 2" />
+    <MESSAGE value="Exercise 3" />
+    <MESSAGE value="Exercise 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 4" />
   </component>
 </project>

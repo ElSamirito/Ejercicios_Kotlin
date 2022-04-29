@@ -1,5 +1,5 @@
 fun main() {
-    eje4()
+    eje5()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -34,4 +34,16 @@ fun eje4(){
     var area = base * alt
 
     print("El perímetro del rectángulo es $peri y el área es $area")
+}
+fun eje5() {
+    println("Ingrese un número:")
+    var a = readLine()!!.toInt()
+    println("Ingrese otro número")
+    var b = readLine()!!.toInt()
+
+    val sum = a+b
+    val mul = a*b
+
+    println("Suma: $sum")
+    println("Producto: $mul")
 }
