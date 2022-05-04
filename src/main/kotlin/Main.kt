@@ -1,5 +1,5 @@
 fun main() {
-    eje11()
+    eje12()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -129,5 +129,24 @@ fun eje11(){
         print("Promocionado!!")
     }else{
         print("Promocionadon't :c")
+    }
+}
+fun eje12(){
+    var score = arrayListOf<Float>()
+    var avg : Float = 0f
+
+    for(i in 0..2){
+        println("Ingrese una nota de un alumno")
+        score.add(readLine()!!.toFloat())
+        avg += score[i]
+    }
+    avg /= 3
+
+    if (avg >=7){
+        print("Promocionado!!")
+    }else if(avg >= 4){
+        print("Regular")
+    }else{
+        print("Reprobado")
     }
 }
