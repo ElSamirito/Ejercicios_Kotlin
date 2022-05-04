@@ -1,5 +1,5 @@
 fun main() {
-    eje8()
+    eje9()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -7,6 +7,7 @@ fun eje1(name: String){
 fun eje2(){
     val a = 2
     val b = 3
+
     var sum = a+b
     var mul = a*b
 
@@ -22,6 +23,7 @@ fun eje3(){
     var c = readLine()!!.toFloat()
 
     var avg = (a+b+c)/3
+
     print("El promedio de alturas es: $avg")
 }
 fun eje4(){
@@ -54,11 +56,13 @@ fun eje6(){
     var cant = readLine()!!.toInt()
 
     val totalP = price * cant
+
     print("El precio final de la orden es de $$totalP")
 }
 fun eje7(){
     var num = arrayListOf<Int>()
     var sum = 0
+
     for(i in 0..3){
         println("Ingrese un numero entero")
         num.add(readLine()!!.toInt())
@@ -69,9 +73,24 @@ fun eje7(){
 fun eje8(){
     println("Ingrese un monto de sueldo")
     var sueldo = readLine()!!.toFloat()
+
     if (sueldo > 100000){
         print("En base a ese monto, se deberian pagar impuestos")
     }else{
         print("En base a ese monto, no se requiere pagar impuestos")
+    }
+}
+fun eje9(){
+    println("Ingrese un numero")
+    val a = readLine()!!.toInt()
+    println("Ingrese otro numero")
+    val b = readLine()!!.toInt()
+
+    if(a > b){
+        print("El mayor de ambos es  $a")
+    }else if (b > a){
+        print("El mayor de ambos es $b")
+    }else{
+        print("Ambos numeros son iguales")
     }
 }
