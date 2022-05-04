@@ -1,5 +1,5 @@
 fun main() {
-    eje12()
+    eje13()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -8,40 +8,40 @@ fun eje2(){
     val a = 2
     val b = 3
 
-    var sum = a+b
-    var mul = a*b
+    val sum = a+b
+    val mul = a*b
 
     println("Suma: $sum")
     println("Producto: $mul")
 }
 fun eje3(){
     println("Ingrese una altura:")
-    var a = readLine()!!.toFloat()
+    val a = readLine()!!.toFloat()
     println("Ingrese una segunda altura:")
-    var b = readLine()!!.toFloat()
+    val b = readLine()!!.toFloat()
     println("Ingrese una tercer y ultima altura:")
-    var c = readLine()!!.toFloat()
+    val c = readLine()!!.toFloat()
 
-    var avg = (a+b+c)/3
+    val avg = (a+b+c)/3
 
     print("El promedio de alturas es: $avg")
 }
 fun eje4(){
     println("Ingrese el ancho de un rectangulo:")
-    var base = readLine()!!.toInt()
+    val base = readLine()!!.toInt()
     println("Ingrese el alto de ese rectangulo:")
-    var alt = readLine()!!.toInt()
+    val alt = readLine()!!.toInt()
 
-    var peri = base*2 + alt*2
-    var area = base * alt
+    val peri = base*2 + alt*2
+    val area = base * alt
 
     print("El perímetro del rectangulo es $peri y el area es $area")
 }
 fun eje5() {
     println("Ingrese un numero:")
-    var a = readLine()!!.toInt()
+    val a = readLine()!!.toInt()
     println("Ingrese otro numero")
-    var b = readLine()!!.toInt()
+    val b = readLine()!!.toInt()
 
     val sum = a+b
     val mul = a*b
@@ -51,16 +51,16 @@ fun eje5() {
 }
 fun eje6(){
     println("Ingrese el precio del articulo:")
-    var price = readLine()!!.toFloat()
+    val price = readLine()!!.toFloat()
     println("Ingrese la cantidad a llevar por el cliente:")
-    var cant = readLine()!!.toInt()
+    val cant = readLine()!!.toInt()
 
     val totalP = price * cant
 
     print("El precio final de la orden es de $$totalP")
 }
 fun eje7(){
-    var num = arrayListOf<Int>()
+    val num = arrayListOf<Int>()
     var sum = 0
 
     for(i in 0..3){
@@ -72,7 +72,7 @@ fun eje7(){
 }
 fun eje8(){
     println("Ingrese un monto de sueldo")
-    var sueldo = readLine()!!.toFloat()
+    val sueldo = readLine()!!.toFloat()
 
     if (sueldo > 100000){
         print("En base a ese monto, se deberian pagar impuestos")
@@ -115,7 +115,7 @@ fun eje10(){
     }
 }
 fun eje11(){
-    var score = arrayListOf<Float>()
+    val score = arrayListOf<Float>()
     var avg : Float = 0f
 
     for(i in 0..2){
@@ -132,7 +132,7 @@ fun eje11(){
     }
 }
 fun eje12(){
-    var score = arrayListOf<Float>()
+    val score = arrayListOf<Float>()
     var avg : Float = 0f
 
     for(i in 0..2){
@@ -148,5 +148,25 @@ fun eje12(){
         print("Regular")
     }else{
         print("Reprobado")
+    }
+}
+fun eje13(){
+    println("Ingrese la cantidad de preguntas en el examen")
+    val qstns = readLine()!!.toInt()
+    println("Ingrese la cantidad respondidas correctamente")
+    val coqstns = readLine()!!.toInt()
+
+    val perc = (100/qstns)*coqstns
+
+    if (perc >= 90){
+        print("Nivel Máximo")
+    }else if(perc >= 75){
+        print("Nivel Medio")
+    }else if(perc >= 50){
+        print("Nivel Regular")
+    }else if(perc >= 25){
+        print("Nivel Muy Bajo")
+    }else{
+        print("Fuera de Nivel")
     }
 }
