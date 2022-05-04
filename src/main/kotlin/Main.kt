@@ -1,5 +1,5 @@
 fun main() {
-    eje7()
+    eje8()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -65,4 +65,13 @@ fun eje7(){
         sum += num[i]
     }
     print("La suma de los valores ingresados es $sum")
+}
+fun eje8(){
+    println("Ingrese un monto de sueldo")
+    var sueldo = readLine()!!.toFloat()
+    if (sueldo > 100000){
+        print("En base a ese monto, se deberian pagar impuestos")
+    }else{
+        print("En base a ese monto, no se requiere pagar impuestos")
+    }
 }
