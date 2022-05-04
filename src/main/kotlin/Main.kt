@@ -1,5 +1,5 @@
 fun main() {
-    eje9()
+    eje10()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -92,5 +92,25 @@ fun eje9(){
         print("El mayor de ambos es $b")
     }else{
         print("Ambos numeros son iguales")
+    }
+}
+fun eje10(){
+    println("Ingrese un numero")
+    val a = readLine()!!.toInt()
+    println("Ingrese otro numero")
+    val b = readLine()!!.toInt()
+
+    var ans = 0
+
+    if(a < b){
+        ans = a + b
+        println("La suma entre ambos numeros es $ans")
+        ans = a - b
+        println("Y la resta es $ans")
+    }else{
+        ans = a * b
+        println("El producto entre ambos numeros es $ans")
+        ans = a / b
+        print("Y la division es $ans")
     }
 }
