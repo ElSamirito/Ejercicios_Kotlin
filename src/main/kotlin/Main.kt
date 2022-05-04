@@ -1,5 +1,5 @@
 fun main() {
-    eje10()
+    eje11()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -112,5 +112,22 @@ fun eje10(){
         println("El producto entre ambos numeros es $ans")
         ans = a / b
         print("Y la division es $ans")
+    }
+}
+fun eje11(){
+    var score = arrayListOf<Float>()
+    var avg : Float = 0f
+
+    for(i in 0..2){
+        println("Ingrese una nota de un alumno")
+        score.add(readLine()!!.toFloat())
+        avg += score[i]
+    }
+    avg /= 3
+
+    if (avg >=7){
+        print("Promocionado!!")
+    }else{
+        print("Promocionadon't :c")
     }
 }
