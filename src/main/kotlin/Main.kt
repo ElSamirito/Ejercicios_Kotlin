@@ -1,5 +1,5 @@
 fun main() {
-    eje13()
+    eje14()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -168,5 +168,19 @@ fun eje13(){
         print("Nivel Muy Bajo")
     }else{
         print("Fuera de Nivel")
+    }
+}
+fun eje14(){
+    println("Ingrese una fecha. Formato DD/MM/AAAA")
+    val date = readLine()
+    val spldate = date!!.split("/")
+
+    val dia = spldate[0]!!.toInt()
+    val mes = spldate[1]!!.toInt()
+
+    if(dia == 25 && mes == 12){
+        print("Es Navidad!!")
+    }else{
+        print("No es Navidad :c")
     }
 }
