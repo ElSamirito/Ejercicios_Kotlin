@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje16()
+    eje17()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -211,4 +211,15 @@ fun eje16(){
     }else{
         print("Todos los numeros ingresados son menores a 10")
     }
+}
+fun eje17(){
+    val n = arrayListOf<Float>()
+    var sum : Float = 0f
+    for(i in 0..9){
+        println("Ingrese un numero")
+        n.add(readLine()!!.toFloat())
+        sum += n[i]
+    }
+    println("La suma de todos los numeros ingresados es $sum")
+    print("Y el promedio es ${sum/10}")
 }
