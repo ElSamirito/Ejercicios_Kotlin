@@ -1,5 +1,7 @@
+import java.lang.Math.pow
+
 fun main() {
-    eje14()
+    eje15()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -182,5 +184,17 @@ fun eje14(){
         print("Es Navidad!!")
     }else{
         print("No es Navidad :c")
+    }
+}
+fun eje15(){
+    val n = arrayListOf<Double>()
+
+    for(i in 0..2){
+        println("Ingrese un numero")
+        n.add(readLine()!!.toDouble())
+    }
+
+    if (n[0] == n[1] && n[1] == n[2] && n[0] == n[2]){
+        print("${ pow(n[0], 3.0) }")
     }
 }
