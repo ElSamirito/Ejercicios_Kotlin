@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje18()
+    eje19()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -243,4 +243,10 @@ fun eje18(){
 
     println("La cantidad de aprobados es $aprov")
     print("Y la de desaprobados es $desaprov")
+}
+fun eje19(){
+    for (i in 0 .. 20){
+        if ((i%2)==0)
+        println("$i")
+    }
 }
