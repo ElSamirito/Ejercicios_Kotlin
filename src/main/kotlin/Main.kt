@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje17()
+    eje18()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -222,4 +222,25 @@ fun eje17(){
     }
     println("La suma de todos los numeros ingresados es $sum")
     print("Y el promedio es ${sum/10}")
+}
+fun eje18(){
+    var nota = 0f
+    var aprov = 0
+    var desaprov = 0
+    var wc = "s"
+
+    do{
+        println("Ingrese una nota de Ap. de Nuevas Tecnologias")
+        nota = readLine()!!.toFloat()
+        if (nota >= 7){
+            aprov++
+        }else{
+            desaprov++
+        }
+        println("Desea ingresar mas notas? s/n")
+        wc = readLine()!!.toString()
+    }while (wc == "s")
+
+    println("La cantidad de aprobados es $aprov")
+    print("Y la de desaprobados es $desaprov")
 }
