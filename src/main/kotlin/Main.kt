@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje19()
+    eje20()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -248,5 +248,12 @@ fun eje19(){
     for (i in 0 .. 20){
         if ((i%2)==0)
         println("$i")
+    }
+}
+fun eje20(){
+    for (i in 20 downTo 0){
+        if ((i % 2) == 0){
+            println("$i")
+        }
     }
 }
