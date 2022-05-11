@@ -194,7 +194,7 @@ fun eje15(){
         n.add(readLine()!!.toDouble())
     }
 
-    if(n[0] == n[1] && n[1] == n[2] && n[0] == n[2]){
+    if(n[0] == n[1] && n[1] == n[2]){
         print("${ pow(n[0], 3.0) }")
     }
 }
