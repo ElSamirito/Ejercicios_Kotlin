@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje20()
+    eje21()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -256,4 +256,20 @@ fun eje20(){
             println("$i")
         }
     }
+}
+fun eje21(){
+    var num = 0
+    var even = 0
+    var wc : String
+    do{
+        println("Ingrese un numero")
+        num = readLine()!!.toInt()
+        if ((num % 2) == 0){
+            even++
+        }
+        println("Desea ingresar mas numeros? s/n")
+        wc = readLine()!!.toString()
+    }while(wc == "s")
+
+    print("La cantidad de numeros pares ingresados es $even")
 }
