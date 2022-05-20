@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje22()
+    eje23()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -298,4 +298,19 @@ fun eje22(){
         println("El menor es: $menor")
         print("En la posicion: $posicionMenor")
     }
+}
+fun eje23(){
+    println("Ingrese la cantidad de horas trabajadas")
+    val horas = readLine()!!.toFloat()
+    println("Ingrese el valor de cada hora de trabajo")
+    val valor = readLine()!!.toFloat()
+    println("Ingrese la antiguedad(en meses) que posee en la empresa")
+    val antiguedad = readLine()!!.toFloat()
+
+    val sueldoBasico = horas * valor
+    val sueldoBasico15 = sueldoBasico * 0.015
+    val sueldoNeto = sueldoBasico + sueldoBasico15 * (antiguedad/12)
+
+    println("Sueldo Basico: $sueldoBasico")
+    println("Sueldo Neto: $sueldoNeto")
 }
