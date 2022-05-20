@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje21()
+    eje22()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -247,7 +247,7 @@ fun eje18(){
 fun eje19(){
     for (i in 0 .. 20){
         if ((i%2)==0)
-        println("$i")
+            println("$i")
     }
 }
 fun eje20(){
@@ -272,4 +272,30 @@ fun eje21(){
     }while(wc == "s")
 
     print("La cantidad de numeros pares ingresados es $even")
+}
+fun eje22(){
+    println("Ingrese la cantidad de numeros a ingresar")
+    val cant = readLine()!!.toInt()
+    var num:Float = 0f
+    var menor:Float = 0f
+    var posicionMenor:Int = 0
+
+    for (i in 1..cant){
+        println("Ingrese un numero")
+        num = readLine()!!.toFloat()
+        if (i == 1){
+            menor = num
+        }else{
+            if (num < menor){
+                menor = num
+                posicionMenor = i
+            }
+        }
+    }
+    if (posicionMenor == 1){
+        print("El primero es menor")
+    }else{
+        println("El menor es: $menor")
+        print("En la posicion: $posicionMenor")
+    }
 }
