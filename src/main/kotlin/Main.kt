@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje23()
+    eje24()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -313,4 +313,17 @@ fun eje23(){
 
     println("Sueldo Basico: $sueldoBasico")
     println("Sueldo Neto: $sueldoNeto")
+}
+fun eje24(){
+    println("Ingrese el monto del presupuesto anual")
+    val presupuesto = readLine()!!.toFloat()
+
+    val cardiologia = presupuesto * 0.4
+    val traumatologia = presupuesto * 0.3
+    val pediatria = presupuesto * 0.3
+
+    println("Presupuesto para Cardiologia $cardiologia")
+    println("Presupuesto para Traumatologia $traumatologia")
+    print("Presupuesto para Pediatria $pediatria")
+
 }
