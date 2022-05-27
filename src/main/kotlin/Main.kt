@@ -1,8 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje19()
-    eje20()
+    eje25()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -290,7 +289,7 @@ fun eje22(){
             }
         }
     }
-    if (posicionMenor == 1){
+    if (posicionMenor == 0){
         print("El primero es menor")
     }else{
         println("El menor es: $menor")
@@ -323,5 +322,26 @@ fun eje24(){
     println("Presupuesto para Cardiologia $cardiologia")
     println("Presupuesto para Traumatologia $traumatologia")
     print("Presupuesto para Pediatria $pediatria")
+}
+fun eje25(){
+    println("Ingrese la cantidad de horas trabajadas en la semana")
+    val horas = readLine()!!.toFloat()
+    var salarioSemanal:Float
+    val extras:Boolean
 
+    if(horas <= 40){
+        salarioSemanal = horas * 300
+        extras = false
+    }else{
+        salarioSemanal = horas * 300
+        salarioSemanal += (horas-40) * 150
+        extras = true
+    }
+
+    if (extras){
+        println("Realizo horas extras")
+    }else{
+        println("No realizo horas extras")
+    }
+    print("Y el total a cobrar esta semana es de $$salarioSemanal")
 }
