@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje25()
+    eje26()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -344,4 +344,15 @@ fun eje25(){
         println("No realizo horas extras")
     }
     print("Y el total a cobrar esta semana es de $$salarioSemanal")
+}
+fun eje26(){
+    println("Ingrese la cantidad de minutos de uso")
+    val minutos = readLine()!!.toInt()
+    println("Ingrese la cantidad de hojas impresas")
+    val hojas = readLine()!!.toInt()
+
+    val totalMins = (minutos * 0.9) + (minutos*0.01)*0.05
+
+    println("Precio final por cada minuto de uso: $${totalMins}")
+    print("Precio final por cada hoja impresa: $${(hojas * 0.07)!!.toFloat()}")
 }
