@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4295a4ce-dd27-48ef-b7bf-231700d24a32" name="Changes" comment="Exercise 25">
+    <list default="true" id="4295a4ce-dd27-48ef-b7bf-231700d24a32" name="Changes" comment="Exercise 27">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653655757723</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Exercise 26">
+      <created>1653656016712</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1653656016712</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Exercise 27">
+      <created>1653656197076</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1653656197076</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +252,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Commit" />
     <MESSAGE value="Exercise 1" />
     <MESSAGE value="Exercise 2" />
     <MESSAGE value="Exercise 7" />
@@ -261,6 +275,8 @@
     <MESSAGE value="Exercise 24" />
     <MESSAGE value="Exercise 19 &amp; 20 fix" />
     <MESSAGE value="Exercise 25" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 25" />
+    <MESSAGE value="Exercise 26" />
+    <MESSAGE value="Exercise 27" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 27" />
   </component>
 </project>

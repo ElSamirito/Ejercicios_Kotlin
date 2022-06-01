@@ -1,7 +1,7 @@
 import java.lang.Math.pow
 
 fun main() {
-    eje27()
+    eje28()
 }
 fun eje1(name: String){
     print("Hola $name!")
@@ -377,4 +377,52 @@ fun eje27(){
 
     println("Sueldo Basico: $sueldoBasico")
     println("Sueldo Neto: $sueldoNeto")
+}
+fun eje28(){
+    val dia = arrayListOf<String>()
+    val temp = arrayListOf<Float>()
+    var menor0 = 0
+    var sumamay0 = 0f
+    var semanaavg = 0f
+    var posmay = 0
+    var posmen = 0
+
+    println("Ingrese el nombre de la localidad")
+    val localidad = readLine().toString()
+    for (i in 0..6){
+        println("Ingrese el dia a registrar")
+        dia.add(readLine().toString())
+        println("Ingrese la temperatura promedio del dia")
+        temp.add(readLine()!!.toFloat())
+
+        semanaavg += temp[i]
+
+        if (temp[i] < 0){
+            menor0++
+        }
+
+        if (temp[i] > 0){
+            sumamay0 += temp[i]
+        }
+
+        if(i==1){
+            posmay = i
+            posmen = i
+        }else{
+            if(temp[i] < temp[posmen]){
+                posmen = i
+            }
+
+            if (temp[i] > temp[posmay]){
+                posmay = i
+            }
+        }
+    }
+
+    println("Mayor temperatura: ${temp[posmay]}C Dia: ${dia[posmay]}")
+    println("Menor temperatura: ${temp[posmen]}C Dia: ${dia[posmen]}")
+    println("Dias bajo-cero: $menor0")
+    println("Suma de temperaturas mayores a 0: $sumamay0")
+    println("Temperaturas Avg: ${semanaavg/7}")
+    print("Localidad: $localidad")
 }
