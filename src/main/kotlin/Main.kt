@@ -1,8 +1,5 @@
-import java.lang.Math.pow
+import java.lang.Math.*
 
-fun main() {
-    eje28()
-}
 fun eje1(name: String){
     print("Hola $name!")
 }
@@ -425,4 +422,63 @@ fun eje28(){
     println("Suma de temperaturas mayores a 0: $sumamay0")
     println("Temperaturas Avg: ${semanaavg/7}")
     print("Localidad: $localidad")
+}
+fun eje29(){
+    var damas:Float = 0f
+    var caballeros:Float = 0f
+    var ninios:Float = 0f
+    var mayor:Float = 0f
+    var codMayor:String = "Codigo Mayor"
+    var menor:Float = 0f
+    var codMenor:String = "Codigo Menor"
+
+    println("Ingrese la cantidad de productos a registrar")
+    val N = readLine()!!.toInt()
+
+    for (i in 1..N){
+        println("Ingrese el codigo de productos(D, C o N)")
+        val codigo = readLine()!!.toString()
+        println("Ingrese la ganancia aportada del producto")
+        val gan = readLine()!!.toFloat()
+        when(codigo){
+            "D", "d" -> damas += gan
+            "C", "c" -> caballeros += gan
+            "N", "n" -> ninios += gan
+        }
+    }
+
+    val gantotal = damas + caballeros + ninios
+
+    mayor = max(max(damas, caballeros), ninios)
+
+    if (mayor == damas){
+        codMayor = "Damas (D)"
+        menor = min(caballeros, ninios)
+    }else if(mayor == caballeros){
+        codMayor = "Caballeros (C)"
+        menor = min(damas, ninios)
+    }else{
+        codMayor = "Ninos (N)"
+        menor = min(damas, caballeros)
+    }
+
+    if (menor == damas){
+        codMenor = "Damas (D)"
+    }else if (menor == caballeros){
+        codMenor = "Caballeros (C)"
+    }else{
+        codMenor = "Ninos (N)"
+    }
+
+    println("Ganancia total: $gantotal")
+    println("Ganancia de damas: ${(damas / gantotal) * 100}%")
+    println("Ganancia de caballeros: ${(caballeros / gantotal) * 100}%")
+    println("Ganancia de ninos: ${(ninios / gantotal) * 100}%")
+    println("El codigo que mayor ganancia reporto es: $codMayor")
+    if (((menor/gantotal)*100) > 20){
+        println("El codigo que menor ganancia reporto es: $codMenor")
+    }
+}
+fun main(){
+    eje29()
 }
