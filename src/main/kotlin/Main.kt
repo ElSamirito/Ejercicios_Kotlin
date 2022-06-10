@@ -479,6 +479,42 @@ fun eje29(){
         println("El codigo que menor ganancia reporto es: $codMenor")
     }
 }
+fun eje30(){
+    /*Un kiosco ubicado en la zona céntrica de nuestra ciudad desea registrar sus ventas por medio de una computadora.
+    Diseñe un programa que lea para N clientes el monto de la venta, y:
+    calcule e imprima el valor correspondiente al IVA.
+    calcule e imprima el monto total a pagar.
+    lea la cantidad con que paga el cliente.
+    calcule e imprima el vuelto que debe entregar.*/
+    var monto = 0f
+    var iva = 0.0
+    var total = 0.0
+    var pago = 0f
+
+    println("Ingrese la cantidad de clientes a registrar")
+    val clientes = readLine()!!.toInt()
+
+    for (i in 1..clientes) {
+        println("Ingrese el valor de la compra")
+        monto = readLine()!!.toFloat()
+
+        iva = monto * 0.21
+        println("El IVA correspondiente a la compra es $$iva")
+
+        total = monto + iva
+        println("El total a pagar es $$total")
+
+        println("Ingrese la cantidad con la que paga el cliente")
+        pago = readLine()!!.toFloat()
+        if (pago<total){
+            println("Falta plata")
+        }else if (pago>total){
+            println("El vuelto a entregar es de $${pago-total}")
+        }else{
+            println("Esta justo")
+        }
+    }
+}
 fun main(){
-    eje29()
+    eje30()
 }
