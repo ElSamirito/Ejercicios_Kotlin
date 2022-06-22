@@ -515,6 +515,52 @@ fun eje30(){
         }
     }
 }
+fun eje31(){
+    /*Ciertos atletas pierden en sus carreras 100 gramos de peso por cada 50m recorridos.
+    Sus entrenadores desean un programa que a partir de datos como:
+    Peso del corredor
+    Longitud del circuito (nunca menor a 50m)
+    Tiempo empleado (en seg.).
+    Cumpla con los siguientes puntos:
+    Determinar cuántos gramos pierde el corredor y cuál es su peso final.
+    Si ha perdido más de 300g de peso, indicar que necesitará vitamina A y si pierde más de 450g necesitará también vitamina C.
+    Sabiendo que para el circuito olímpico el tiempo récord es de 25 seg. en 400m, y que para el circuito panamericano el tiempo récord es de 15 seg. en 250m, determinar si el corredor ha mejorado alguno de estos récords.
+    Hacer ésto para N corredores.*/
+    var pesoF: Float
+    var pesoP: Float
+    var circuito: Float
+    var tiempo: Float
+
+    print("Ingrese la cantidad de corredores a registrar: ")
+    val corredores = readLine()!!.toInt()
+
+    for(i in 1..corredores){
+        print("Ingrese el peso del corredor(Kg): ")
+        pesoF= readLine()!!.toFloat()
+        print("Ingrese la longitud del circuito(No menor a 50m): ")
+        circuito = readLine()!!.toFloat()
+        print("Ingrese el tiempo empleado al recorrerlo(Seg): ")
+        tiempo = readLine()!!.toFloat()
+
+        pesoP = circuito/50 * 100
+        pesoF *= 1000
+        pesoF -= pesoP
+        pesoF /= 1000
+
+        println("El corredor perdio $pesoP g, con un peso final de $pesoF Kg")
+        if (pesoP>450){
+            println("Necesita consumir Vitamina A y C")
+        }else if (pesoP>300){
+            println("Necesita consumir Vitamina A")
+        }
+
+        if (circuito >= 400 && tiempo < 25){
+            println("El corredor rompio el record olimpico")
+        }else if (circuito >= 250 && tiempo < 15){
+            println("El corredor rompio el record panamericano")
+        }
+    }
+}
 fun main(){
-    eje30()
+    eje31()
 }
