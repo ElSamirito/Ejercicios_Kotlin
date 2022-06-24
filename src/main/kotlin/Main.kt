@@ -561,6 +561,25 @@ fun eje31(){
         }
     }
 }
+fun eje32(){
+    print("Ingrese el capital de la empresa: ")
+    var capital = readLine()!!.toFloat()
+
+    if(capital > 20000){
+        /* No Préstamo */
+    }else if(capital > 0){
+        capital += 20000 /* Préstamo de 20k */
+    }else{
+        capital += 10000 /* Préstamo de 10k */
+    }
+    capital -= 5000
+    println("Equipo de Computo: $5000")
+    capital -= 2000
+    println("Mobiliario: $2000")
+    capital /= 2
+    println("Compra de Insumos: ${abs(capital)}")
+    println("Incentivos al Personal: ${abs(capital)}")
+}
 fun main(){
-    eje31()
+    eje32()
 }
