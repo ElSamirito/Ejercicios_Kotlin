@@ -580,6 +580,76 @@ fun eje32(){
     println("Compra de Insumos: ${abs(capital)}")
     println("Incentivos al Personal: ${abs(capital)}")
 }
+fun eje33() {
+    println("Ingrese una fecha de nacimiento")
+    print("Dia: ")
+    val dia = readLine()!!.toInt()
+    print("Mes: ")
+    val mes = readLine()!!.toString()
+
+    when(mes){
+        "Enero" -> if(dia <= 20){
+            print("Capricornio")
+        }else{
+            print("Acuario")
+        }
+        "Febrero" -> if (dia <= 20){
+            print("Acuario")
+        }else{
+            print("Piscis")
+        }
+        "Marzo" -> if (dia <= 20){
+            print("Piscis")
+        }else{
+            print("Aries")
+        }
+        "Abril" -> if (dia <= 20){
+            print("Aries")
+        }else{
+            print("Tauro")
+        }
+        "Mayo" -> if (dia <= 20){
+            print("Tauro")
+        }else{
+            print("Geminis")
+        }
+        "Junio" -> if (dia <= 20){
+            print("Geminis")
+        }else{
+            print("Cancer")
+        }
+        "Julio" -> if (dia <= 20){
+            print("Cancer")
+        }else{
+            print("Leo")
+        }
+        "Agosto" -> if (dia <= 20){
+            print("Leo")
+        }else{
+            print("Virgo")
+        }
+        "Septiembre" -> if (dia <= 20){
+            print("Virgo")
+        }else{
+            print("Libra")
+        }
+        "Octubre" -> if (dia <= 20){
+            print("Libra")
+        }else{
+            print("Escorpio")
+        }
+        "Noviembre" -> if (dia <= 20){
+            print("Escorpio")
+        }else{
+            print("Sagitario")
+        }
+        "Diciembre" -> if (dia <= 20){
+            print("Sagitario")
+        }else{
+            print("Capricornio")
+        }
+    }
+}
 fun main(){
-    eje32()
+    eje33()
 }
