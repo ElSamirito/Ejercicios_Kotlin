@@ -650,6 +650,43 @@ fun eje33() {
         }
     }
 }
+fun sumFantasma(lista:MutableList<Int>):Int{
+    var resultado:Int = 0
+    for(i in lista){
+        resultado += lista[i]
+    }
+    return resultado
+}
+fun ejFantasma(){
+    var num = mutableListOf<Int>()
+
+    for (i in 0..9){
+        print("Ingrese un numero: ")
+        num.add(readLine()!!.toInt())
+    }
+    sumFantasma(num)
+}
+fun suma(a:Float, b:Float):Float{
+    return a+b
+}
+fun resta(a:Float, b:Float):Float{
+    return a-b
+}
+fun multi(a:Float, b:Float):Float{
+    return a*b
+}
+fun divi(a:Float, b:Float):Float{
+    return a/b
+}
+fun tp3ej1(){
+    val num1 = 238f
+    val num2 = 121f
+
+    println("La suma entre 238 y 121 es ${suma(num1, num2)}")
+    println("La resta entre 238 y 121 es ${resta(num1, num2)}")
+    println("El producto entre 238 y 121 es ${multi(num1, num2)}")
+    println("El cosciente entre 238 y 121 es ${divi(num1, num2)}")
+}
 fun main(){
-    eje33()
+    tp3ej1()
 }
