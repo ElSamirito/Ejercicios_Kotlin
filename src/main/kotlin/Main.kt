@@ -666,27 +666,43 @@ fun ejFantasma(){
     }
     sumFantasma(num)
 }
-fun suma(a:Float, b:Float):Float{
+fun suma(a:Int, b:Int):Int{
     return a+b
 }
-fun resta(a:Float, b:Float):Float{
+fun resta(a:Int, b:Int):Int{
     return a-b
 }
-fun multi(a:Float, b:Float):Float{
+fun multi(a:Int, b:Int):Int{
     return a*b
 }
-fun divi(a:Float, b:Float):Float{
+/*fun divi(a:Int, b:Int):Float{
     return a/b
-}
+}*/
 fun tp3ej1(){
-    val num1 = 238f
-    val num2 = 121f
+    val num1 = 238
+    val num2 = 121
 
     println("La suma entre 238 y 121 es ${suma(num1, num2)}")
     println("La resta entre 238 y 121 es ${resta(num1, num2)}")
     println("El producto entre 238 y 121 es ${multi(num1, num2)}")
-    println("El cosciente entre 238 y 121 es ${divi(num1, num2)}")
+    //println("El cosciente entre 238 y 121 es ${divi(num1, num2)}")
+}
+fun tp3ej2() {
+    var num1: Int = 0
+    var num2: Int = 0
+    for(i in 0..1){
+        print("Ingrese un numero entero: ")
+        num1 = readLine()!!.toInt()
+        print("Ingrese otro: ")
+        num2 = readLine()!!.toInt()
+        println("La suma de entre ambos numeros es ${suma(num1, num2)}")
+        for (z in 0..30){
+            print("-")
+        }
+        println("-")
+    }
+
 }
 fun main(){
-    tp3ej1()
+    tp3ej2()
 }
