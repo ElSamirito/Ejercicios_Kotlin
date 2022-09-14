@@ -703,6 +703,86 @@ fun tp3ej2() {
     }
 
 }
+fun calcularMayor(a: Int, b: Int, c: Int):String{
+    var mayor = 0
+    if (a==b && b==c){
+        return "Todos valen lo mismo"
+    }
+    if(a>b && a>c){
+        mayor=a
+    }else{
+        if(b>c){
+            mayor=b
+        }else{
+            mayor=c
+        }
+    }
+    return "El mayor de los numeros ingresados es $mayor"
+}
+fun tp3ej3(){
+    print("Ingrese un numero entero: ")
+    val num1 = readLine()!!.toInt()
+    print("Ingrese un numero entero: ")
+    val num2 = readLine()!!.toInt()
+    print("Ingrese un numero entero: ")
+    val num3 = readLine()!!.toInt()
+
+    print(calcularMayor(num1, num2, num3))
+}
+fun tp3ej4(){
+    print("Ingrese el lado de un cuadrado: ")
+    val ladoq = readLine()!!.toDouble()
+    println("Que quiere hacer con ese dato:")
+    println("1. Calcular Perimetro")
+    println("2. Calcular Superficie")
+    val op = readLine()!!.toInt()
+    when(op){
+        1 -> println("El perimetro del cuadrado propuesto seria ${ladoq*4}");
+        2 -> println("La superficie del cuadrado propuesto seria ${pow(ladoq, 2.0)}")
+    }
+}
+fun superficie(a: Float, b: Float):Float{
+    return a*b
+}
+fun tp3ej5(){
+    print("Ingrese el alto de un rectangulo: ")
+    val alt = readLine()!!.toFloat()
+    print("Ingrese el ancho del mismo: ")
+    val anch = readLine()!!.toFloat()
+    print("La superficie del rectangulo propuesto es ${superficie(alt,anch)}")
+}
+fun mayorde2(a: Int, b: Int):Int{
+    if (a>b){
+        return a
+    }else if (b>a){
+        return b
+    }
+}
+fun tp3ej6(){
+    print("Ingrese un numero entero: ")
+    val num1 = readLine()!!.toInt()
+    print("Ingrese otro numero entero: ")
+    val num2 = readLine()!!.toInt()
+
+    print("El mayor es ${mayorde2(num1, num2)}")
+}
+fun strlen(a: String):Int{
+    return a.length
+}
+fun tp3ej7(){
+    print("Ingrese un nombre: ")
+    val name1 = readLine().toString()
+    print("Ingrese otro nombre distinto: ")
+    val name2 = readLine().toString()
+
+    val leng1 = strlen(name1)
+    val leng2 = strlen(name2)
+    val mayor = mayorde2(leng1, leng2)
+
+    if(mayor == leng1){
+
+    }
+}
 fun main(){
-    tp3ej2()
+    tp3ej7()
 }
