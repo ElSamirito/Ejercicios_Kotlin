@@ -752,11 +752,15 @@ fun tp3ej5(){
     print("La superficie del rectangulo propuesto es ${superficie(alt,anch)}")
 }
 fun mayorde2(a: Int, b: Int):Int{
+    var mayor = 0
+
     if (a>b){
-        return a
+         mayor = a
     }else if (b>a){
-        return b
+        mayor = b
     }
+
+    return mayor
 }
 fun tp3ej6(){
     print("Ingrese un numero entero: ")
@@ -780,9 +784,33 @@ fun tp3ej7(){
     val mayor = mayorde2(leng1, leng2)
 
     if(mayor == leng1){
-
+        print("'$name1' tiene mas caracteres")
+    }else if(mayor == leng2){
+        print("'$name2' tiene mas caracteres")
+    }else{
+        print("Ambos tienen la misma cantidad de caracteres")
     }
 }
+fun promedio(a:Int, b:Int, c:Int):Float{
+    val suma = a+b+c
+    println("La suma de los enteros ingresados es $suma")
+    return suma/3f
+}
+fun tp3ej8(){
+    print("Ingrese un numero entero: ")
+    val num1 = readLine()!!.toInt()
+    print("Ingrese un numero entero: ")
+    val num2 = readLine()!!.toInt()
+    print("Ingrese un numero entero: ")
+    val num3 = readLine()!!.toInt()
+
+    val prom = promedio(num1, num2, num3)
+
+    print("El promedio de estos es $prom")
+}
+fun tp3ej9(){
+
+}
 fun main(){
-    tp3ej7()
+    tp3ej8()
 }
