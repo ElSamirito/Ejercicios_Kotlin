@@ -809,8 +809,27 @@ fun tp3ej8(){
     print("El promedio de estos es $prom")
 }
 fun tp3ej9(){
+    fun prom(a:Int, b:Int, c:Int):Double = (a+b+c)/3.0
 
+    var nums = emptyArray<Int>()
+
+    for (i in 1..3){
+        print("Ingrese un numero entero: ")
+        nums += readLine()!!.toInt()
+    }
+
+    print("El promedio entre ellos es ${prom(nums[0], nums[1], nums[2])}")
+}
+fun tp3ej10(){
+    fun peri(a:Float, b:Float):Float = a*2 + b*2
+
+    print("Ingrese el lado 'a' de un rectangulo: ")
+    val ladoa = readLine()!!.toFloat()
+    print("Ingrese el lado 'b' de un rectangulo: ")
+    val ladob = readLine()!!.toFloat()
+
+    print("El perimetro del rectangulo es ${peri(ladoa, ladob)}")
 }
 fun main(){
-    tp3ej8()
+    tp3ej10()
 }
