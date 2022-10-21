@@ -830,6 +830,38 @@ fun tp3ej10(){
 
     print("El perimetro del rectangulo es ${peri(ladoa, ladob)}")
 }
+fun tp3ej11(){
+    fun leng11(a:String):Int = a.length
+
+    print("Ingrese un nombre: ")
+    val name1 = readLine().toString()
+    print("Ingrese otro nombre distinto: ")
+    val name2 = readLine().toString()
+
+    val leng1 = leng11(name1)
+    val leng2 = leng11(name2)
+    val mayor = mayorde2(leng1, leng2)
+
+    if(mayor == leng1){
+        print("'$name1' tiene mas caracteres")
+    }else if(mayor == leng2){
+        print("'$name2' tiene mas caracteres")
+    }else{
+        print("Ambos tienen la misma cantidad de caracteres")
+    }
+}
+fun tp3ej12(){
+    fun notaparcs(nota1:Float, nota2:Float):String{
+        if(nota1 >= 8 && nota2 >= 8){
+            return "Promociono"
+        }else if(nota1 >= 6 && nota2 >= 6){
+            return "Regular"
+        }else{
+            return "Libre"
+        }
+    }
+
+}
 fun main(){
-    tp3ej10()
+    tp3ej12()
 }
