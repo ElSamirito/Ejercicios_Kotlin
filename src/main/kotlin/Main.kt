@@ -866,17 +866,19 @@ fun mostrararray(array:IntArray){
 
 }
 fun findarray(elem:Int, array:IntArray): Boolean {
-    for (i in 0..array.size) {
+    var esta = false
+    for (i in 0..array.size-1) {
         if (array[i] == elem){
-            return true
+            esta = true
         }
     }
+    return esta
 }
 fun tp4ej14(){
     val N = 3
     var vec1 = IntArray(N)
     var vec2 = IntArray(N)
-    var vec3 = IntArray(N)
+    var vec3 = IntArray(0)
 
     println("Ingrese valores al primer vector:")
     for (i in 0..N-1){
@@ -889,17 +891,8 @@ fun tp4ej14(){
         vec2[i] = readLine()!!.toInt()
     }
 
-    vec1@ for (i in 0..N-1){
-        var esta:Boolean = true
-        for (j in 0..N-1){
-            if (vec1[i] == vec2[j]){
-                esta = true
-                break@vec1
-            }else{
-                esta = false
-            }
-        }
-        if (!esta){
+    for(i in 0..N-1){
+        if(!findarray(vec1[i], vec2)){
             vec3 += vec1[i]
         }
     }

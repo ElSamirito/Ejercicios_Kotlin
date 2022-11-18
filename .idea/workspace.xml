@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4295a4ce-dd27-48ef-b7bf-231700d24a32" name="Changes" comment="Exercise 7&amp;8 TP 3">
+    <list default="true" id="4295a4ce-dd27-48ef-b7bf-231700d24a32" name="Changes" comment="Exercise 11&amp;12 TP 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -300,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664993773711</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Exercise 11&amp;12 TP 3">
+      <created>1666358374174</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1666358374174</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +322,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 14" />
     <MESSAGE value="Exercise 15" />
     <MESSAGE value="Exercise 16" />
     <MESSAGE value="Exercise 17" />
@@ -340,6 +346,7 @@
     <MESSAGE value="Exercise 1&amp;2 TP 3" />
     <MESSAGE value="Exercise 3,4,5,6&amp;7 TP 3" />
     <MESSAGE value="Exercise 7&amp;8 TP 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 7&amp;8 TP 3" />
+    <MESSAGE value="Exercise 11&amp;12 TP 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 11&amp;12 TP 3" />
   </component>
 </project>
