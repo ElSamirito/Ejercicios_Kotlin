@@ -516,16 +516,6 @@ fun eje30(){
     }
 }
 fun eje31(){
-    /*Ciertos atletas pierden en sus carreras 100 gramos de peso por cada 50m recorridos.
-    Sus entrenadores desean un programa que a partir de datos como:
-    Peso del corredor
-    Longitud del circuito (nunca menor a 50m)
-    Tiempo empleado (en seg.).
-    Cumpla con los siguientes puntos:
-    Determinar cuántos gramos pierde el corredor y cuál es su peso final.
-    Si ha perdido más de 300g de peso, indicar que necesitará vitamina A y si pierde más de 450g necesitará también vitamina C.
-    Sabiendo que para el circuito olímpico el tiempo récord es de 25 seg. en 400m, y que para el circuito panamericano el tiempo récord es de 15 seg. en 250m, determinar si el corredor ha mejorado alguno de estos récords.
-    Hacer ésto para N corredores.*/
     var pesoF: Float
     var pesoP: Float
     var circuito: Float
@@ -862,6 +852,64 @@ fun tp3ej12(){
     }
 
 }
+fun mostrararray(array:IntArray){
+    val last = array.size - 1
+    print("[")
+    for (i in 0..last) {
+        if (i == last) {
+            print("${array[i]}")
+        } else {
+            print("${array[i]}, ")
+        }
+    }
+    println("]")
+
+}
+fun findarray(elem:Int, array:IntArray): Boolean {
+    for (i in 0..array.size) {
+        if (array[i] == elem){
+            return true
+        }
+    }
+}
+fun tp4ej14(){
+    val N = 3
+    var vec1 = IntArray(N)
+    var vec2 = IntArray(N)
+    var vec3 = IntArray(N)
+
+    println("Ingrese valores al primer vector:")
+    for (i in 0..N-1){
+        print("Elemento $i: ")
+        vec1[i] = readLine()!!.toInt()
+    }
+    println("Ingrese valores al segundo vector:")
+    for (i in 0..N-1){
+        print("Elemento $i: ")
+        vec2[i] = readLine()!!.toInt()
+    }
+
+    vec1@ for (i in 0..N-1){
+        var esta:Boolean = true
+        for (j in 0..N-1){
+            if (vec1[i] == vec2[j]){
+                esta = true
+                break@vec1
+            }else{
+                esta = false
+            }
+        }
+        if (!esta){
+            vec3 += vec1[i]
+        }
+    }
+    println("Vector Nº1:")
+    mostrararray(vec1)
+    println("Vector Nº2:")
+    mostrararray(vec2)
+    println("Vector Nº3:")
+    mostrararray(vec3)
+}
 fun main(){
-    tp3ej12()
+    tp4ej14()
 }
