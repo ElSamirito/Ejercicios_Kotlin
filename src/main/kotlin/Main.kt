@@ -843,14 +843,42 @@ fun tp3ej11(){
 fun tp3ej12(){
     fun notaparcs(nota1:Float, nota2:Float):String{
         if(nota1 >= 8 && nota2 >= 8){
-            return "Promociono"
+            return "Promocionado"
         }else if(nota1 >= 6 && nota2 >= 6){
             return "Regular"
         }else{
             return "Libre"
         }
     }
+    var leg:Int
+    var parc1:Float
+    var parc2:Float
+    var prom = 0
+    var reg = 0
+    var lib = 0
+    do{
+        print("Ingrese N de Legajo: ")
+        leg = readLine()!!.toInt()
+        if (leg == -1){
+            println("Ingreso finalizado")
+            break
+        }
+        print("Ingrese la nota del primer parcial: ")
+        parc1 = readLine()!!.toFloat()
+        print("Ingrese la nota del segundo parcial: ")
+        parc2 = readLine()!!.toFloat()
+        val result = notaparcs(parc1, parc2)
+        println("Alumno $result")
 
+        when(result){
+            "Promocionado" -> prom++
+            "Regular" -> reg++
+            "Libre" -> lib++
+        }
+    }while(true)
+    println("Cantidad de Alumnos Promocionados: $prom")
+    println("Cantidad de Alumnos Regulares: $reg")
+    println("Cantidad de Alumnos Libres: $lib")
 }
 fun mostrararray(array:IntArray){
     val last = array.size - 1
@@ -904,5 +932,5 @@ fun tp4ej14(){
     mostrararray(vec3)
 }
 fun main(){
-    tp4ej14()
+    tp3ej12()
 }
