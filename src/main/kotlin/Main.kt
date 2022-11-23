@@ -850,19 +850,18 @@ fun tp3ej12(){
             return "Libre"
         }
     }
-    var leg:Int
-    var parc1:Float
-    var parc2:Float
-    var prom = 0
-    var reg = 0
-    var lib = 0
+
+    var leg:Int; var parc1:Float; var parc2:Float; var prom = 0; var reg = 0; var lib = 0
+
     do{
         print("Ingrese N de Legajo: ")
         leg = readLine()!!.toInt()
+
         if (leg == -1){
             println("Ingreso finalizado")
             break
         }
+
         print("Ingrese la nota del primer parcial: ")
         parc1 = readLine()!!.toFloat()
         print("Ingrese la nota del segundo parcial: ")
@@ -875,10 +874,34 @@ fun tp3ej12(){
             "Regular" -> reg++
             "Libre" -> lib++
         }
+
     }while(true)
+
     println("Cantidad de Alumnos Promocionados: $prom")
     println("Cantidad de Alumnos Regulares: $reg")
     println("Cantidad de Alumnos Libres: $lib")
+}
+fun tp3ej13(){
+    print("Ingrese un número entero: ")
+    val num1 = readLine()!!.toInt()
+    print("Ingrese otro(No necesariamente otro): ")
+    val num2 = readLine()!!.toInt()
+
+    do{
+
+    }
+
+    println("MENÚ")
+    println("*********************************")
+    println("1: suma")
+    println("2: resta")
+    println("3: multiplicación")
+    println("4: división")
+    println("5: cuadrado")
+    println("6: raíz cuadrada")
+    println("7: Salir")
+    println("**********************************")
+
 }
 fun mostrararray(array:IntArray){
     val last = array.size - 1
@@ -932,5 +955,5 @@ fun tp4ej14(){
     mostrararray(vec3)
 }
 fun main(){
-    tp3ej12()
+    tp3ej13()
 }
