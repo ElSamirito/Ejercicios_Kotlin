@@ -881,26 +881,68 @@ fun tp3ej12(){
     println("Cantidad de Alumnos Regulares: $reg")
     println("Cantidad de Alumnos Libres: $lib")
 }
+fun suma(a: Int, b: Int):Int{
+    return a+b
+}
+fun resta(a: Int, b: Int):Int{
+    return a-b
+}
+fun multi(a:Int, b: Int):Int{
+    return a*b
+}
+fun divi(a: Int, b: Int):Int{
+    val result = round(a/b)
+    return result
+}
 fun tp3ej13(){
-    print("Ingrese un número entero: ")
+    var op = 0
+    var resu = IntArray(0)
+    var cantresu = 0
+    print("Ingrese un numero entero: ")
     val num1 = readLine()!!.toInt()
     print("Ingrese otro(No necesariamente otro): ")
     val num2 = readLine()!!.toInt()
 
     do{
+        println("MENU")
+        println("*********************************")
+        println("1: Suma")
+        println("2: Resta")
+        println("3: Multiplicacion")
+        println("4: Division")
+        println("5: Cuadrado")
+        println("6: Raiz Cuadrada")
+        println("7: Salir")
+        println("**********************************")
+        print("Elija una opcion: ")
+        op = readLine()!!.toInt()
+        if (op==7){
 
-    }
-
-    println("MENÚ")
-    println("*********************************")
-    println("1: suma")
-    println("2: resta")
-    println("3: multiplicación")
-    println("4: división")
-    println("5: cuadrado")
-    println("6: raíz cuadrada")
-    println("7: Salir")
-    println("**********************************")
+        }
+        when(op){
+            1 -> {
+                resu += num1+num2;cantresu++
+            }
+            2 -> {
+                resu += num1-num2;cantresu++
+            }
+            3 -> {
+                resu += num1*num2;cantresu++
+            }
+            4 -> {
+                resu += num1/num2;cantresu++
+            }
+            5 -> {
+                resu += pow(num1.toDouble(), 2.0).toInt()
+                resu += pow(num1.toDouble(), 2.0).toInt()
+            }
+            6 -> sqrt(num1.toDouble())
+            7 -> {
+                print("Operaciones Finalizadas")
+                break
+            }
+        }
+    }while(true)
 
 }
 fun mostrararray(array:IntArray){
