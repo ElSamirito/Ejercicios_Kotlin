@@ -959,6 +959,41 @@ fun tp3ej13(){
     mostrararrayDou(resu)
     print("Cantidad de operaciones realizadas: ${resu.size}")
 }
+fun tp3ej14(){
+    fun error(){
+        println("¡La edad ingresada es invalida!")
+        print("Facturacion Cancelada")
+    }
+    fun factf(weeks:Float){
+        var pay:Float
+        print("Ingrese la edad de la facturada: ")
+        val age = readLine()!!.toInt()
+        if (age >= 65){
+            pay = (weeks*5000)+2500
+        }else if (age >= 60){
+            pay = weeks*5000
+        }else{
+            /*
+        }
+    }
+    do {
+        print("Ingrese la cantidad de semanas a facturar: ")
+        var weeks= readLine()!!.toFloat()
+        print("Ingrese el sexo de la persona a facturar(F/M): ")
+        var sex = readLine()!!.toString()
+        when(sex){
+            "F", "f" -> {
+                factf(weeks)
+            }
+            "M", "m" -> {
+
+            }
+        }
+
+        print("Desea facturar otra persona?(S/N): ")
+        var seguir = readLine()!!.toString()
+    }while ()
+}
 fun mostrararrayInt(array:IntArray){
     val last = array.size - 1
     print("[")
@@ -1011,5 +1046,5 @@ fun tp4ej14(){
     mostrararrayInt(vec3)
 }
 fun main(){
-    tp3ej13()
+    tp3ej14()
 }
