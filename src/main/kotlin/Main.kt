@@ -881,23 +881,38 @@ fun tp3ej12(){
     println("Cantidad de Alumnos Regulares: $reg")
     println("Cantidad de Alumnos Libres: $lib")
 }
-fun suma(a: Int, b: Int):Int{
-    return a+b
-}
-fun resta(a: Int, b: Int):Int{
-    return a-b
-}
-fun multi(a:Int, b: Int):Int{
-    return a*b
-}
-fun divi(a: Int, b: Int):Int{
-    val result = round(a/b)
-    return result
-}
 fun tp3ej13(){
+    fun mostrararrayDou(array:DoubleArray){
+        val last = array.size - 1
+        print("[");for (i in 0..last) {
+            if (i == last){print("${array[i]}")
+            }else{print("${array[i]}, ")}
+        };println("]")
+    }
+    fun suma(a: Int, b: Int):Double{
+        return (a+b).toDouble()
+    }
+    fun resta(a: Int, b: Int):Double{
+        return (a-b).toDouble()
+    }
+    fun multi(a: Int, b: Int):Double{
+        return (a*b).toDouble()
+    }
+    fun divi(a: Int, b: Int):Double{
+        val sa = a.toDouble()
+        val sb = b.toDouble()
+        return round(sa/sb).toDouble()
+    }
+    fun pow2(x:Int):Double{
+        return pow(x.toDouble(), 2.0)
+    }
+    fun rtsqr(x:Int):Double{
+        return sqrt(x.toDouble())
+    }
+
     var op = 0
-    var resu = IntArray(0)
-    var cantresu = 0
+    var resu = DoubleArray(0)
+
     print("Ingrese un numero entero: ")
     val num1 = readLine()!!.toInt()
     print("Ingrese otro(No necesariamente otro): ")
@@ -916,27 +931,23 @@ fun tp3ej13(){
         println("**********************************")
         print("Elija una opcion: ")
         op = readLine()!!.toInt()
-        if (op==7){
 
-        }
         when(op){
-            1 -> {
-                resu += num1+num2;cantresu++
-            }
-            2 -> {
-                resu += num1-num2;cantresu++
-            }
-            3 -> {
-                resu += num1*num2;cantresu++
-            }
+            1 -> resu += suma(num1, num2)
+            2 -> resu += resta(num1, num2)
+            3 -> resu += multi(num1, num2)
             4 -> {
-                resu += num1/num2;cantresu++
+                resu += divi(num1, num2)
+                resu += divi(num2, num1)
             }
             5 -> {
-                resu += pow(num1.toDouble(), 2.0).toInt()
-                resu += pow(num1.toDouble(), 2.0).toInt()
+                resu += pow2(num1)
+                resu += pow2(num2)
             }
-            6 -> sqrt(num1.toDouble())
+            6 -> {
+                resu += rtsqr(num1)
+                resu += rtsqr(num2)
+            }
             7 -> {
                 print("Operaciones Finalizadas")
                 break
@@ -944,8 +955,11 @@ fun tp3ej13(){
         }
     }while(true)
 
+    println("Resultados de las operaciones:")
+    mostrararrayDou(resu)
+    print("Cantidad de operaciones realizadas: ${resu.size}")
 }
-fun mostrararray(array:IntArray){
+fun mostrararrayInt(array:IntArray){
     val last = array.size - 1
     print("[")
     for (i in 0..last) {
@@ -990,11 +1004,11 @@ fun tp4ej14(){
         }
     }
     println("Vector Nº1:")
-    mostrararray(vec1)
+    mostrararrayInt(vec1)
     println("Vector Nº2:")
-    mostrararray(vec2)
+    mostrararrayInt(vec2)
     println("Vector Nº3:")
-    mostrararray(vec3)
+    mostrararrayInt(vec3)
 }
 fun main(){
     tp3ej13()
